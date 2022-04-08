@@ -33,7 +33,7 @@ function renderLicenseSection(license) {
   // creating license section
   let licenseSection = "";
   if(license != "None") {
-    licenseSection += "## " + license + "\n"
+    licenseSection += "## " + "License" + "\n"
     licenseSection += "Check here to see " + renderLicenseLink(license) + " to get more information\n";
   }
   return licenseSection;
@@ -80,7 +80,7 @@ function generateMarkdown(data) {
   
   // Adding Questions 
   template +="## " + contents[6] + "\n";
-  template += "If you have any questions, please contact me at " + data.email + ") on google\n";
+  template += "If you have any questions, please contact me at " + data.email + "\n";
   template += "This is my github account: http://github.com/" + data.username + "\n";
   
   return template;

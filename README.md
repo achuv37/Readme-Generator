@@ -10,18 +10,18 @@
 7. [Questions](#questions)
 
 ## Description
-Readme-Generator using Node.js
+Readme-Generator usiing Node.js
 ## Installation
-Clone the starting code from Hithub and Installed inquirer
+Installed inquirer, clone the starting code from github
 ## Usage
 use Inquirer to prompt questions
 ## Contributing
 Aswathy
 ## Tests
 npm test
-## MIT
+## License
 Check here to see https://mit-license.org/ to get more information
 
 ## Questions
-If you have any questions, please contact me at achuv37@gmail.com) on google
+If you have any questions, please contact me at achuv37@gmail.com
 This is my github account: http://github.com/achuv37
