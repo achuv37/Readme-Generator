@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let badge = "";
@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
   return badge;
 }
 
-// TODO: Create a function that returns the license link
+// Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let licenseLink = "";
@@ -27,13 +27,13 @@ function renderLicenseLink(license) {
   return licenseLink
 }
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   // creating license section
   let licenseSection = "";
   if(license != "None") {
-    licenseSection += "## License\n"
+    licenseSection += "## " + license + "\n"
     licenseSection += "Check here to see " + renderLicenseLink(license) + " to get more information\n";
   }
   return licenseSection;
@@ -41,19 +41,19 @@ function renderLicenseSection(license) {
 
 // Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const contents = ["Description","Installation","Usage","Contributing","Tests","License","Questions"];
+  const contents = ["Description", "Installation", "Usage", "Contributing", "Tests", "License", "Questions"];
   // Adding title
   let template = "# " + data.title + "\n";
   // Adding license badge
   template += renderLicenseBadge(data.license) + "\n";
   // Adding table of contents
-  template += "## Table of Contents \n";
+  template += "## Table of Contents\n";
   for (let i = 0; i<contents.length; i++) {
     if(!(contents[i]==="License" && data.license ==="None")) {
-      template += i + 1 + ".[" + contents[i] + "](#" + contents[i][0].toLowerCase() + contents[i].substring(1) + ")\n";
+      template +=  i+ 1 + ". [" + contents[i] + "](#" + contents[i][0].toLowerCase() + contents[i].substring(1) + ")\n";
     }
   }
-  template +="\n";
+  template += "\n";
 
   // Adding Description 
   template += "## " + contents[0] + "\n";
@@ -80,7 +80,7 @@ function generateMarkdown(data) {
   
   // Adding Questions 
   template +="## " + contents[6] + "\n";
-  template += "If you have any questions, please contact me at " + data.email + "." + "\n";
+  template += "If you have any questions, please contact me at " + data.email + ") on google\n";
   template += "This is my github account: http://github.com/" + data.username + "\n";
   
   return template;
