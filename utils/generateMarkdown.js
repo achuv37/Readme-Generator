@@ -33,17 +33,57 @@ function renderLicenseSection(license) {
   // creating license section
   let licenseSection = "";
   if(license != "None") {
-    licenseSection += "##License\n"
+    licenseSection += "## License\n"
     licenseSection += "Check here to see " + renderLicenseLink(license) + " to get more information\n";
   }
   return licenseSection;
 }
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const contents = ["Description","Installation","Usage","Contributing","Tests","License","Questions"];
+  // Adding title
+  let template = "# " + data.title + "\n";
+  // Adding license badge
+  template += renderLicenseBadge(data.license) + "\n";
+  // Adding table of contents
+  template += "## Table of Contents \n";
+  for (let i = 0; i<contents.length; i++) {
+    if(!(contents[i]==="License" && data.license ==="None")) {
+      template += i + 1 + ".[" + contents[i] + "](#" + contents[i][0].toLowerCase() + contents[i].substring(1) + ")\n";
+    }
+  }
+  template +="\n";
 
-`;
+  // Adding Description 
+  template += "## " + contents[0] + "\n";
+  template += data.description + "\n";
+
+  // Adding Installation
+  template += "## " + contents[1] + "\n";
+  template += data.install + "\n";
+
+  // Adding Usage 
+  template += "## " + contents[2] + "\n";
+  template += data.usage + "\n";
+
+  // Adding Contributors
+  template += "## " + contents[3] + "\n";
+  template += data.contributors + "\n";
+
+  // Adding Test
+  template += "## " + contents[4] + "\n";
+  template += data.test + "\n";
+
+  //Adding License
+  template += renderLicenseSection(data.license) + "\n";
+  
+  // Adding Questions 
+  template +="## " + contents[6] + "\n";
+  template += "If you have any questions, please contact me at " + data.email + "." + "\n";
+  template += "This is my github account: http://github.com/" + data.username + "\n";
+  
+  return template;
 }
 
 module.exports = generateMarkdown;
