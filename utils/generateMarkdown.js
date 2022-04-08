@@ -34,7 +34,7 @@ function renderLicenseSection(license) {
   let licenseSection = "";
   if(license != "None") {
     licenseSection += "## " + "License" + "\n"
-    licenseSection += "Check here to see " + renderLicenseLink(license) + " to get more information\n";
+    licenseSection += "Check here: " + renderLicenseLink(license) + " to get more information\n";
   }
   return licenseSection;
 }
@@ -80,8 +80,8 @@ function generateMarkdown(data) {
   
   // Adding Questions 
   template +="## " + contents[6] + "\n";
-  template += "If you have any questions, please contact me at " + data.email + "\n";
-  template += "This is my github account: http://github.com/" + data.username + "\n";
+  template += "Please contact me at " + data.email + " if you have any questions.\n";
+  template += "Check here: (http://github.com/" + data.username + ") on Github.\n";
   
   return template;
 }
