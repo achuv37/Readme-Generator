@@ -3,7 +3,7 @@
 function renderLicenseBadge(license) {
   let badge = "";
   if(license != "None") {
-    badge = "![License Badge](https://img.shields.io/badge/License-" + license + "-yellow.svg)";
+    badge = "![License Badge](https://img.shields.io/badge/License-" + license + "-blue)";
   }
   return badge;
 }

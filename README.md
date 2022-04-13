@@ -1,5 +1,5 @@
 # Readme-Generator
-![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License Badge](https://img.shields.io/badge/License-MIT-blue)
 ## Table of Contents
 1. [Description](#description)
 2. [Installation](#installation)
@@ -10,11 +10,11 @@
 7. [Questions](#questions)
 
 ## Description
-A Readme-Generator using the command line to enter details of the project. Basic README template is created from the answers to the questionsprompted by the command line.
+A Readme-Generator using the command line to enter the details about the project.Basic Readme template is created by the answera to the questions prompted by the command line.
 ## Installation
-Installed inquirer. clone the starting code from github.
+Clone the starting code from github. Installed inquirer to prompt questions
 ## Usage
-Use inquirer to prompt questions.
+This method is used to generate Readme file for future projects.
 ## Contributing
 Aswathy
 ## Tests
