@@ -11,9 +11,9 @@
   * [Tests](#tests)
   * [Questions](#questions)
   ## Installation
-  Installed inquirer to prompt questions for user
+  Installed inquirer to prompt questions to the user
   ## Usage 
-  This method is used to generate readme file for future projects
+  This method is used to generate Readme-Generator for future projects.
   
   ## License
 Check here: https://mit-license.org/ to get more information
